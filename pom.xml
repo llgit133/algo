@@ -15,6 +15,7 @@
         <module>Offer_75</module>
         <module>Offer_119</module>
         <module>leetcode_zuo</module>
+        <module>Code</module>
     </modules>
 
     <properties>

@@ -1,5 +1,7 @@
 package org.example.double_pointer;
 
+
+// 删除节点
 public class Offer_2_18 {
 
     public static ListNode deleteNode(ListNode head, int val) {

@@ -90,7 +90,7 @@ public class Code03_TreeMaxWidth {
 		return levelMap;
 	}
 
-	//
+	// 得到每个节点得层数
 	public static HashMap<Node, Integer> getMaxWidth2(Node head) {
 		HashMap<Node, Integer> levelMap = new HashMap<>();
 		levelMap.put(head, 1);

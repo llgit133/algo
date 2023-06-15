@@ -1,5 +1,7 @@
 package org.example.double_pointer;
 
+
+// 链表合并
 public class Offer_2_25 {
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {

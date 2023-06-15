@@ -1,5 +1,6 @@
 package org.example.bit;
 
+// 位运算求和
 public class Offer_11_65 {
 
     public static int add(int a, int b) {

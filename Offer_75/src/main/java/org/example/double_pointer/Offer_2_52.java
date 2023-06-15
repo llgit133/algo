@@ -3,6 +3,7 @@ package org.example.double_pointer;
 import java.util.HashSet;
 import java.util.Set;
 
+// 链表相交  hash表
 public class Offer_2_52 {
 
     public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {

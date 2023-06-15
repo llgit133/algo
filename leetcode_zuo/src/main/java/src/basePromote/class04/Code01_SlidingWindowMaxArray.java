@@ -19,6 +19,8 @@ import java.util.LinkedList;
 //请实现一个函数。 输入:整型数组arr，窗口大小为w。
 //输出:一个长度为n-w+1的数组res，res[i]表示每一种窗口状态下的 以本题为例，结果应该
 //返回{5,5,5,4,6,7}
+
+
 public class Code01_SlidingWindowMaxArray {
 
 	public static int[] getMaxWindow(int[] arr, int w) {

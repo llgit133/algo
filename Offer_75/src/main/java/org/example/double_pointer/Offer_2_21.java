@@ -1,5 +1,6 @@
 package org.example.double_pointer;
 
+// 奇数放在偶数前面
 public class Offer_2_21 {
     public static int[] exchange(int[] nums) {
         int [] res = new int[nums.length];
@@ -15,10 +16,40 @@ public class Offer_2_21 {
         }
         return res;
     }
+
+
+    // 双指针解法
+    public static int[] exchange1(int[] nums) {
+        int low = 0;
+        int high = nums.length - 1;
+
+        while (low < high){
+
+            while(low < high && (nums[low] %2 == 1)) low ++;    //向右搜索第一个奇数
+            while(low < high && (nums[high] %2 == 0)) high --;  // 向左搜索第一个偶数
+
+            // 交换nums[low] 和nums[high]
+            //swap(nums[low], nums[high]);
+
+            int temp = nums[low];
+            nums[low] = nums[high];
+            nums[high] = temp;
+        }
+        return nums;
+    }
+
+
+    public static void swap(int a, int b){
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+    }
+
+
     public static void main(String[] args) {
 
         int [] nums =new int[]{1,2,3,4};
-        int[] ints = exchange(nums);
+        int[] ints = exchange1(nums);
         for (int anInt : ints) {
             System.out.print(" "+anInt);
         }

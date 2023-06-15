@@ -1,6 +1,7 @@
 package org.example.double_pointer;
 
 public class Offer_2_57 {
+
     public static int[] twoSum(int[] nums, int target) {
         int i = 0, j = nums.length - 1;
         while(i < j) {

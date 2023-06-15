@@ -1,7 +1,9 @@
 package org.example.bit;
 
+//统计1的个数
 public class Offer_11_15 {
 
+    // 求出32位的二进制，统计1的个数
     public static int hammingWeight(int n) {
 
         StringBuilder sb = new StringBuilder();

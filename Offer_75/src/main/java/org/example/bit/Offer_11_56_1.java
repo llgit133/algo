@@ -1,7 +1,10 @@
 package org.example.bit;
 
+// 找两个奇数
 public class Offer_11_56_1 {
 
+    // 1,2,10,4,1,4,3,3
+    // 1，1，3，3，4，4，2，10
     public static int[] singleNumbers(int[] nums) {
 
         //1、eor = 2 ^ 10
@@ -29,7 +32,6 @@ public class Offer_11_56_1 {
         for (int anInt : ints) {
             System.out.print(" "+anInt);
         }
-
 
     }
 }
