@@ -1,0 +1,30 @@
+package org.example.FirstPage;
+
+public class LC_14_longestCommonPrefix {
+
+    public static String longestCommonPrefix(String[] strs) {
+        if(strs.length == 0) return "";
+
+        String ans = strs[0];
+
+        // 不断迭代
+        for(int i =1;i<strs.length;i++) {
+            int j=0;
+            for(;j < ans.length() && j < strs[i].length();j++) {
+                if(ans.charAt(j) != strs[i].charAt(j))
+                    break;
+            }
+            ans = ans.substring(0, j);
+
+            if(ans.equals("")) return ans;// 为空、直接返回
+        }
+        return ans;
+    }
+
+
+    public static void main(String[] args) {
+
+        String [] strs =  new String[]{"flower","flow","flight"};
+        System.out.println(longestCommonPrefix(strs));
+    }
+}
