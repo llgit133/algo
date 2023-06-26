@@ -9,3 +9,4 @@ leetcode easy
 
 
 6.16 code thinking 
+6.26 code thinking
