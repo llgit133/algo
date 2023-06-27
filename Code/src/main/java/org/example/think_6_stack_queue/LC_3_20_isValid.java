@@ -12,6 +12,7 @@ package org.example.think_6_stack_queue;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Stack;
 
 //输入：s = "()[]{}"
 //输出：true
@@ -19,22 +20,24 @@ public class LC_3_20_isValid {
 
     public static boolean isValid(String s) {
 
-        Deque<Character> deque = new LinkedList<>();
-        char ch;
+        Stack<Character> stack = new Stack<>();
 
         for (int i = 0; i < s.length(); i++) {
-            ch = s.charAt(i);
-            //碰到左括号，就把相应的右括号入栈
-            if (ch == '(') {deque.push(')');}
-            else if (ch == '{') {deque.push('}');}
-            else if (ch == '[') {deque.push(']');}
+            char ch = s.charAt(i);
 
-            else if (deque.isEmpty() || deque.peek() != ch) {return false;}
+            //碰到左括号，就把相应的右括号入栈
+            if (ch == '(') {stack.push(')');}
+            else if (ch == '{') {stack.push('}');}
+            else if (ch == '[') {stack.push(']');}
+
+            // 遍历过程中栈为空、或者不等则false
+            else if (stack.isEmpty() || stack.peek() != ch) {return false;}
+
             //如果是右括号判断是否和栈顶元素匹配
-            else {deque.pop();}
+            else {stack.pop();}
         }
 
-        return deque.isEmpty();
+        return stack.isEmpty();
     }
 
     public static void main(String[] args) {

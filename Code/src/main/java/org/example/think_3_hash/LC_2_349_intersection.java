@@ -16,9 +16,7 @@ public class LC_2_349_intersection {
         }
         //遍历数组2的过程中判断哈希表中是否存在该元素
         for (int i : nums2) {
-            if (set.contains(i)) {
-                resSet.add(i);
-            }
+            if (set.contains(i)) {resSet.add(i);}
         }
         return resSet.stream().mapToInt(x -> x).toArray();
     }

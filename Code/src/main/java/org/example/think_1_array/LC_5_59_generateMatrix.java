@@ -18,6 +18,8 @@ public class LC_5_59_generateMatrix {
     //填充左列从下到上
 
 
+
+    //[)
     public static int[][] generateMatrix(int n) {
         int loop = 0;  // 控制循环次数
         int[][] res = new int[n][n];
@@ -42,6 +44,7 @@ public class LC_5_59_generateMatrix {
             start++;
         }
 
+        //
         if (n % 2 == 1) {res[start][start] = count;}
         return res;
     }
