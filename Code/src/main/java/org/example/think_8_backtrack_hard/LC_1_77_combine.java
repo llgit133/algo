@@ -15,13 +15,10 @@ public class LC_1_77_combine {
     // 1 、2
     // 删除2 、回溯到1
     // 然后再从1开始  加入3       1、3
-
     // 把for循环抽象成递归
-
 
     static List<List<Integer>> result = new ArrayList<>();
     static LinkedList<Integer> path = new LinkedList<>();
-
 
     // 1,2,3,4   2
     public static List<List<Integer>> combine(int n, int k) {
@@ -63,7 +60,7 @@ public class LC_1_77_combine {
 
         for (List<Integer> list : lists) {
             for (Integer integer : list) {
-                System.out.print(" "+integer);
+                System.out.print("，"+integer);
             }
             System.out.println();
         }

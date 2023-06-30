@@ -28,6 +28,7 @@ public class Offer_4_67_isNumber {
         number,
         other
     }
+
     static final int INT_MIN = (int) (Math.pow(2, 31) * (-1));
     static final int INT_MAX = (int) (Math.pow(2, 31)) - 1;
 
@@ -66,31 +67,36 @@ public class Offer_4_67_isNumber {
         int length = s.length();
         State state = State.start;
         StringBuilder sb  = new StringBuilder();
-        int flag = 0;
+        int flag = 0;  //flag定正负
 
         for (int i = 0; i < length; i++) {
             CharType type = toCharType(s.charAt(i));
-            if (!transfer.get(state).containsKey(type)) {
-                return -1;
-            } else {
+            if (!transfer.get(state).containsKey(type)) {return -1;}
+
+            else {
                 state = transfer.get(state).get(type);
-                if(state == State.in_number ){
-                    sb.append(s.charAt(i));
-                }
-                if(state == State.signed ){
-                    flag = s.charAt(i) == '-' ? -1 : 1;
-                }
+
+                // 当前位是数字
+                if(state == State.in_number ){sb.append(s.charAt(i));}
+
+                // 当前位是符号 负号时flag = -1,
+                if(state == State.signed ){flag = s.charAt(i) == '-' ? -1 : 1;}
             }
         }
 
+
+        // TODO 待办1
+        // 判断最后一个字符的状态、这样才符合数字的定义
         if(state == State.in_number || state == State.end) {
             int res = 0;
 
+            // 把收集到的字符转为数字“123” -> 123
             for (int i = 0; i < sb.length(); i++) {
                 int temp = sb.charAt(i) - '0';
                 res = res * 10 + temp;
             }
 
+            // 最值判断
             if (res * flag < INT_MIN) return INT_MIN;
             else if (res * flag > INT_MAX) return INT_MAX;
             else return flag * res;
@@ -98,6 +104,7 @@ public class Offer_4_67_isNumber {
         return -1;
 
     }
+
     public static CharType toCharType(char ch) {
         if (ch >= '0' && ch <= '9') return CharType.number;
         else if (ch == '+' || ch == '-') return CharType.sign;

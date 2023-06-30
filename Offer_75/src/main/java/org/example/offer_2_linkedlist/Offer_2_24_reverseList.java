@@ -6,9 +6,9 @@ public class Offer_2_24_reverseList {
 
     // 原地逆置
     public static ListNode reverseList(ListNode head) {
+
         ListNode pre = null;
         ListNode cur = head;
-
         while(cur != null){
             ListNode nxt = cur.next;
             cur.next = pre;

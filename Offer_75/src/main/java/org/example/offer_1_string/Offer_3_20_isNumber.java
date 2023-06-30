@@ -11,6 +11,7 @@ import java.util.Map;
 //部分非数值列举如下：
 //["12e", "1a3.14", "1.2.3", "+-5", "12e+5.4"]
 public class Offer_3_20_isNumber {
+
     // 10种状态
     // 当前处理到字符串的哪个部分、当作状态的表述
     enum State{
@@ -38,7 +39,7 @@ public class Offer_3_20_isNumber {
 
     public static boolean isNumber(String s) {
 
-        // 当前状态、当前状态的下一个状态集合
+        // key当前状态、value当前状态的下一个状态集合
         // key:State   value:Map
         Map<State, Map<CharType, State>> transfer = new HashMap<>();
 
@@ -117,7 +118,6 @@ public class Offer_3_20_isNumber {
         transfer.put(State.STATE_END, endMap);
 
 
-
         // 可以把这个数搞出来
         StringBuilder sb = new StringBuilder();
         int length = s.length();
@@ -130,19 +130,17 @@ public class Offer_3_20_isNumber {
             //type 字符i的类型
             CharType type = toCharType(s.charAt(i));
 
-            // 看当前状态的下一个状态是否有 type
+            // 看当前状态的下一个状态是否有 CharType
             // 没有 直接返回false
-            if (!transfer.get(state).containsKey(type)) {
-                return false;
-            } else {
-                // 迭代state
-                state = transfer.get(state).get(type);
-            }
+            if (!transfer.get(state).containsKey(type)) {return false;}
+
+            // 迭代state
+            else {state = transfer.get(state).get(type);}
         }
 
 
 
-        // 处理到尾部了、判断
+        // 处理到尾部了、判断是否可以作为结尾
         // STATE_INTEGER整数部分
         // STATE_POINT 左侧有整数的小数点
         // STATE_FRACTION小数部分
@@ -157,6 +155,7 @@ public class Offer_3_20_isNumber {
 
 
     public static  CharType toCharType(char ch) {
+
         // 逐个字符分析
         if (ch >= '0' && ch <= '9') return CharType.CHAR_NUMBER;
         else if (ch == 'e' || ch == 'E') return CharType.CHAR_EXP;
