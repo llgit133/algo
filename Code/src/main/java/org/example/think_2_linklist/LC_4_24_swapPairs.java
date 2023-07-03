@@ -5,27 +5,28 @@ package org.example.think_2_linklist;
 //输出：[2,1,4,3]
 public class LC_4_24_swapPairs {
 
+
+    // ok
     public static ListNode swapPairs(ListNode head) {
 
-        ListNode A = head;
-        ListNode B = A.next;
+        ListNode left = head;
+        ListNode right= head.next;
 
-        while (A != null && B != null ){
-            swap(A.val, B.val);
+        while (right != null ){
 
-            A = B.next;
-            B = A.next;
+            int temp = left.val;
+            left.val = right.val;
+            right.val = temp;
+
+            if(left.next.next != null && right.next.next != null) {
+                left = left.next.next;
+                right = right.next.next;
+            }
+
+            else break;
         }
-
         return head;
     }
-
-    public static void swap(int A , int B){
-        int temp = A;
-        A = B;
-        B = temp;
-    }
-
 
 
     public static ListNode swapPairs1(ListNode head) {
@@ -55,11 +56,16 @@ public class LC_4_24_swapPairs {
         ListNode n2 = new ListNode(2);
         ListNode n3 = new ListNode(3);
         ListNode n4 = new ListNode(4);
+        ListNode n5 = new ListNode(5);
+        ListNode n6 = new ListNode(6);
+
         n1.next = n2;
         n1.next.next = n3;
         n1.next.next.next = n4;
+        n1.next.next.next.next = n5;
+        n1.next.next.next.next.next = n6;
 
-        ListNode node = swapPairs1(n1);
+        ListNode node = swapPairs(n1);
         while (node != null){
             System.out.println(node.val);
             node = node.next;

@@ -17,7 +17,7 @@ public class Lc_1_35_searchInsert {
         return nums.length;
     }
 
-    //二分法
+    //二分法找插入的点
     public  static int searchInsert1(int[] nums, int target) {
         int n = nums.length;
 
@@ -37,7 +37,9 @@ public class Lc_1_35_searchInsert {
             // 1. 目标值等于数组中某一个元素  return mid;
             else {return mid;}
         }
-        // 2.目标值在数组所有元素之前 3.目标值插入数组中 4.目标值在数组所有元素之后 return right + 1;
+        // 2.目标值在数组所有元素之前
+        // 3.目标值插入数组中
+        // 4.目标值在数组所有元素之后 return right + 1;
         return right + 1;
     }
 

@@ -6,6 +6,8 @@ import com.sun.security.auth.UnixNumericUserPrincipal;
 //34. 在排序数组中查找元素的第一个和最后一个位置
 //输入：nums = [5,7,7,8,8,10], target = 8
 //输出：[3,4]
+
+// 二分法的变体问题
 public class LC_1_34_searchRange {
 
     public static int[] searchRange(int[] nums, int target) {
@@ -22,7 +24,10 @@ public class LC_1_34_searchRange {
 
             if (nums[mid] > target) {right = mid - 1;}
             else if(nums[mid] < target) {left = mid + 1;}
+
+            // ==
             else {
+                // 最左，前面没有target
                 if(mid == 0 || nums[mid - 1] != target) return mid;
                 else right = mid -1;
             }
@@ -30,6 +35,8 @@ public class LC_1_34_searchRange {
         return -1;
     }
 
+
+    // 最右
     public static int getRight(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
@@ -38,7 +45,9 @@ public class LC_1_34_searchRange {
 
             if (nums[mid] > target) {right = mid - 1;}
             else if(nums[mid] < target) {left = mid + 1;}
+            // ==
             else {
+                // 最右，后面没有target
                 if(mid == nums.length - 1 || nums[mid+1] != target)return mid;
                 else left = mid + 1;
             }

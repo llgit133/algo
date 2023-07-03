@@ -40,6 +40,7 @@ class MyLinkedList {
 
     //获取第index个节点的数值，注意index是从0开始的，第0个节点就是头结点
     public int get(int index) {
+
         //如果index非法，返回-1
         if (index < 0 || index >= size) {return -1;}
 
@@ -81,14 +82,15 @@ class MyLinkedList {
     public void deleteAtIndex(int index) {
         if (index < 0 || index >= size) {return;}
         size--;
+
         if (index == 0) {
             head = head.next;
             return;
         }
+
+        //找到第index个节点的前一个节点
         ListNode pred = head;
-        for (int i = 0; i < index ; i++) {
-            pred = pred.next;
-        }
+        for (int i = 0; i < index ; i++) {pred = pred.next;}
         pred.next = pred.next.next;
     }
 }

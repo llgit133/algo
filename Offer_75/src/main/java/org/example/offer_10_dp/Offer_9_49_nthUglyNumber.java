@@ -10,7 +10,7 @@ package org.example.offer_10_dp;
 
 // 这个题用三指针，第一个丑数是1，以后的丑数都是基于前面的小丑数分别乘2，3，5构成的。
 // 我们每次添加进去一个当前计算出来个三个丑数的最小的一个，并且是谁计算的，谁指针就后移一位。
-public class Offer_9_49 {
+public class Offer_9_49_nthUglyNumber {
 
     public static int nthUglyNumber(int n) {
 

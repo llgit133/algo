@@ -1,7 +1,8 @@
 package org.example.think_3_hash;
 
 
-//有效的字母异位词
+// 有效的字母异位词
+// 数组也是hash
 public class LC_1_242_isAnagram {
 
     public static boolean isAnagram(String s, String t) {

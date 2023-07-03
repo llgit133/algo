@@ -27,9 +27,11 @@ public class LC_5_59_generateMatrix {
         int count = 1;  // 定义填充数字
         int i, j;
 
+
+        // 0-n-1    1-n-2    3-n-3
         while (loop++ < n / 2) { // 判断边界后，loop从1开始
 
-            // 模拟上侧从左到右
+            // 模拟上侧从左到右（不包括最右）
             for (j = start; j < n - loop; j++) {res[start][j] = count++;}
 
             // 模拟右侧从上到下
@@ -41,10 +43,11 @@ public class LC_5_59_generateMatrix {
             // 模拟左侧从下到上
             for (; i >= loop; i--) {res[i][j] = count++;}
 
-            start++;
+            // 下一轮开始
+            start ++;
         }
 
-        //
+        // 最后一圈只有一个奇数的时候
         if (n % 2 == 1) {res[start][start] = count;}
         return res;
     }
@@ -59,7 +62,6 @@ public class LC_5_59_generateMatrix {
             }
             System.out.println();
         }
-
 
     }
 }

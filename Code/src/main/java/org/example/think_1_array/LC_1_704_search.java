@@ -39,7 +39,7 @@ public class LC_1_704_search {
     //5、二分变体3
     //6、二分变体4
 
-    //3、最左
+    //3、最左 if (mid == 0 || nums[mid - 1] != target){return mid;}
     public static int search3(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
@@ -47,7 +47,7 @@ public class LC_1_704_search {
         while (left <= right){
             int mid = (left)+(right -left) / 2;
             if(nums[mid] == target){
-                if (mid == 0 || nums[mid - 1] == target){return mid;}
+                if (mid == 0 || nums[mid - 1] != target){return mid;}
                 else right = mid - 1;
             }
             else if(nums[mid] < target) left = mid + 1;
@@ -58,7 +58,7 @@ public class LC_1_704_search {
     }
 
 
-    //4、最右
+    //4、最右 if (mid == nums.length -1 || nums[mid + 1] != target){return mid;}
     public static int search4(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
@@ -66,7 +66,7 @@ public class LC_1_704_search {
         while (left <= right){
             int mid = (left)+(right -left) / 2;
             if(nums[mid] == target){
-                if (mid == nums.length -1 || nums[mid + 1] == target){return mid;}
+                if (mid == nums.length -1 || nums[mid + 1] != target){return mid;}
                 else left = mid + 1;
             }
             else if(nums[mid] < target) left = mid + 1;
@@ -76,15 +76,17 @@ public class LC_1_704_search {
         return -1;
     }
 
-    //5、大于等于最小
+    //5、大于等于最小  if (mid == 0 || nums[mid - 1] < target){return mid;}
     public static int search5(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
 
         while (left <= right){
             int mid = (left)+(right -left) / 2;
+
+            // >=
             if(nums[mid] >= target){
-                if (mid == 0 || nums[mid - 1] > target){return mid;}
+                if (mid == 0 || nums[mid - 1] < target){return mid;}
                 else right = mid - 1;
             }
             else if(nums[mid] < target) left = mid + 1;
@@ -94,17 +96,15 @@ public class LC_1_704_search {
         return -1;
     }
 
-    //6、小于等于最大
-    // if(nums[mid] <= target){
-    //      if (mid == nums.length - 1 || nums[mid + 1] > target){return mid;}
-    //       else left = mid + 1;
-    // }
+    //6、小于等于最大  if (mid == nums.length - 1 || nums[mid + 1] > target){return mid;}
     public static int search6(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
 
         while (left <= right){
             int mid = (left)+(right -left) / 2;
+
+            // <=
             if(nums[mid] <= target){
                 if (mid == nums.length - 1 || nums[mid + 1] > target){return mid;}
                 else left = mid + 1;
@@ -120,8 +120,12 @@ public class LC_1_704_search {
     public static void main(String[] args) {
 
 
-       int[] nums = new int[]{1,2,3,4,5,6};
-        System.out.println(search(nums, 5));
-
+       int[] nums = new int[]{1,3,4,5,6,8,8,8,11,13};
+        System.out.println(search(nums, 3));   //[]
+        System.out.println(search2(nums, 3));  //[)
+        System.out.println(search3(nums, 8));  //最右
+        System.out.println(search4(nums, 8));  //最左
+        System.out.println(search5(nums, 6));  //大于等于最小
+        System.out.println(search6(nums, 10));  //小于等于最大
     }
 }

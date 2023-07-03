@@ -16,7 +16,6 @@ public class LC_1_203_removeElements {
             if(head.next.val == val){head.next = head.next.next;}
             head = head.next;
         }
-
         return dummy_head.next;
     }
 

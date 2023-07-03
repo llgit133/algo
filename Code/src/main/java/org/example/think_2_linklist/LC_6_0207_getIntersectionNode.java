@@ -12,6 +12,8 @@ import java.util.HashSet;
 
 public class LC_6_0207_getIntersectionNode {
 
+
+    // 链表相交、hash即可
     public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
 
         HashSet<ListNode> set = new HashSet<>();

@@ -87,8 +87,8 @@ public class Offer_4_67_isNumber {
 
         // TODO 待办1
         // 判断最后一个字符的状态、这样才符合数字的定义
+        int res  = 0;
         if(state == State.in_number || state == State.end) {
-            int res = 0;
 
             // 把收集到的字符转为数字“123” -> 123
             for (int i = 0; i < sb.length(); i++) {

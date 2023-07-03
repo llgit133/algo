@@ -11,13 +11,12 @@ import java.util.Stack;
 //4、使用栈解决反转链表的问题
 public class LC_3_203_reverseList {
 
-    //1、双指针法
+    //1、双指针法  原地反转链表
     public static ListNode reverseList1(ListNode head) {
 
         ListNode prev = null;
         ListNode cur = head;
         while (cur != null) {
-
             ListNode temp = cur.next;// 保存下一个节点
             cur.next = prev;
             prev = cur;
@@ -37,7 +36,7 @@ public class LC_3_203_reverseList {
         ListNode cur = head;
         while(cur != null){
             ListNode temp = cur.next;
-            // 头插法
+            // 头插法,可以做到链表反转
             cur.next = dumpyHead.next;
             dumpyHead.next = cur;
             cur = temp;
@@ -50,8 +49,10 @@ public class LC_3_203_reverseList {
     public ListNode reverseList4(ListNode head) {
         // 如果链表为空，则返回空
         if (head == null) return null;
+
         // 如果链表中只有只有一个元素，则直接返回
         if (head.next == null) return head;
+
         // 创建栈 每一个结点都入栈
         Stack<ListNode> stack = new Stack<>();
         ListNode cur = head;

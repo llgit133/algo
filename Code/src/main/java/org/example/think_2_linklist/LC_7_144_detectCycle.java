@@ -15,7 +15,8 @@ public class LC_7_144_detectCycle {
             slow = slow.next;
             fast = fast.next.next;
 
-            if (slow == fast) {// 有环
+            // 有环
+            if (slow == fast) {
 
                 // 两个指针，从头结点和相遇结点
                 // 各走一步，直到相遇，相遇点即为环入口
@@ -27,7 +28,7 @@ public class LC_7_144_detectCycle {
                     index1 = index1.next;
                     index2 = index2.next;
                 }
-                // 直到相遇
+                // 直到相遇、即为环的入口
                 return index1;
             }
         }
