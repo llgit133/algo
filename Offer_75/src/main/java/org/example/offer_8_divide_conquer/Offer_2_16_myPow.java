@@ -21,6 +21,6 @@ public class Offer_2_16_myPow {
     }
 
     public static void main(String[] args) {
-        System.out.println(myPow(10, 10));
+
     }
 }
