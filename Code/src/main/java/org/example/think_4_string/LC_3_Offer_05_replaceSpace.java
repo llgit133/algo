@@ -5,7 +5,7 @@ package org.example.think_4_string;
 
 //示例 1： 输入：s = "We are happy."
 //输出："We%20are%20happy."
-public class Offer_3_05 {
+public class LC_3_Offer_05_replaceSpace {
 
     public static String replaceSpace(String s) {
 

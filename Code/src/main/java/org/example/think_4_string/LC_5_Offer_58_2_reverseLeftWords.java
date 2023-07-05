@@ -3,9 +3,9 @@ package org.example.think_4_string;
 
 //剑指Offer58-II.左旋转字符串
 //示例 1：
-//输入: s = "abcdefg", k = 2
-//输出: "cdefgab"
-public class Offer_5_58_2 {
+//输入: s = "ab、cdefg", k = 2
+//输出: "cdefg、ab"
+public class LC_5_Offer_58_2_reverseLeftWords {
 
 
     public  static String reverseLeftWords(String s, int n) {

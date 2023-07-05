@@ -20,7 +20,7 @@ public class Lc_4_151_reverseWords {
         Collections.reverse(list);
 
 
-        // join 方法
+        // join 方法  join数组
         return String.join(" ", list);
     }
 

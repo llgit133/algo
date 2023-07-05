@@ -3,7 +3,6 @@ package org.example.think_4_string;
 
 //28. 找出字符串中第一个匹配项的下标  KMP
 
-
 //示例 1: 输入: haystack = "hello", needle = "ll" 输出: 2
 //示例 2: 输入: haystack = "aaaaa", needle = "bba" 输出: -1
 

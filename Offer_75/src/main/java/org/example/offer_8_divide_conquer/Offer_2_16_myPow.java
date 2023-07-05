@@ -1,6 +1,5 @@
 package org.example.offer_8_divide_conquer;
 
-import javax.imageio.stream.ImageInputStream;
 
 public class Offer_2_16_myPow {
 
