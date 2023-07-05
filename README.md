@@ -14,5 +14,8 @@ leetcode easy
 
 6.27 code thinking
 
+7.3 codeing think
+7.5 剑指offer
+
 
 
