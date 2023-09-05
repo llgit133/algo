@@ -3,7 +3,7 @@ package org.example.offer_7_tree_backtrack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Offer_7_34 {
+public class Offer_9_34 {
 
 
     public static List<List<Integer>> pathSum(TreeNode root, int target) {

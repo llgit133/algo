@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class Offer_7_32_2 {
+public class Offer_2_32_2 {
 
     public static List<List<Integer>> levelOrder(TreeNode root) {
         if(root == null) return null;

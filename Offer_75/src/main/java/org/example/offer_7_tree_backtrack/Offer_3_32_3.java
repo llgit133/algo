@@ -2,7 +2,7 @@ package org.example.offer_7_tree_backtrack;
 
 import java.util.*;
 
-public class Offer_7_32_3 {
+public class Offer_3_32_3 {
 
 
     public static List<List<Integer>> levelOrder(TreeNode root) {

@@ -1,6 +1,6 @@
 package org.example.offer_7_tree_backtrack;
 
-public class Offer_7_28 {
+public class Offer_6_28 {
 
     public static boolean isSymmetric(TreeNode root) {
         return check(root, root);

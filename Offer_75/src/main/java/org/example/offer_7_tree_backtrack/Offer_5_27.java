@@ -8,7 +8,7 @@ import java.util.Queue;
 // 如果当前遍历到的节点 root 的左右两棵子树都已经翻转得到镜像， 那么我们只需要交换两棵子树的位置，即可得到以 root 为根节点的整棵子树的镜像。
 
 
-public class Offer_7_27 {
+public class Offer_5_27 {
 
     // 左、右、根
     public static TreeNode mirrorTree(TreeNode root) {

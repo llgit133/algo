@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Offer_7_32_1 {
+public class Offer_1_32_1 {
 
     public static int[] levelOrder(TreeNode root) {
         if(root == null) return new int[0];

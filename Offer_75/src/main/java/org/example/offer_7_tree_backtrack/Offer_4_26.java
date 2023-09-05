@@ -3,7 +3,11 @@ package org.example.offer_7_tree_backtrack;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Offer_7_26 {
+
+
+// 树的子结构   判断B是否为A的子树
+
+public class Offer_4_26 {
 
     public static boolean isSubStructure(TreeNode A, TreeNode B) {
 
@@ -40,7 +44,7 @@ public class Offer_7_26 {
     }
 
 
-    // 这是包含判断
+    // 这是包含判断   理解了
     // B是否在A内
     private static boolean helper(TreeNode nodeA, TreeNode nodeB){
         Queue<TreeNode> queueA = new LinkedList<>();

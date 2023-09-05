@@ -31,10 +31,10 @@ public class LC_5_59_generateMatrix {
         // 0-n-1    1-n-2    3-n-3
         while (loop++ < n / 2) { // 判断边界后，loop从1开始
 
-            // 模拟上侧从左到右（不包括最右）
+            // 模拟上侧 从左到右（不包括最右）
             for (j = start; j < n - loop; j++) {res[start][j] = count++;}
 
-            // 模拟右侧从上到下
+            // 模拟右侧 从上到下
             for (i = start; i < n - loop; i++) {res[i][j] = count++;}
 
             // 模拟下侧从右到左
