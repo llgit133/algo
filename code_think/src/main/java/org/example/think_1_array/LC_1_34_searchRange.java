@@ -1,4 +1,4 @@
-package main.java.org.example.think_1_array;
+package org.example.think_1_array;
 
 
 import com.sun.security.auth.UnixNumericUserPrincipal;

@@ -14,11 +14,14 @@
         <module name="collection_framework" />
         <module name="code_zuo" />
         <module name="code_zuo_learn" />
-        <module name="code_think" />
         <module name="offer_119" />
+        <module name="code_think" />
         <module name="leetcode_learn" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zheng_learn" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

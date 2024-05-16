@@ -3,7 +3,7 @@ package org.example.think_0_train;
 public class BiraySearch {
 
 
-    // 1、
+    // 1、基本二分法
     public static int basic1_fun(int [] arr,int target){
 
         int left = 0;
@@ -46,7 +46,7 @@ public class BiraySearch {
             int mid = left + (right -left) / 2;
 
             if(arr[mid] == target){
-                if(arr[mid-1] !=target || mid == 0) return mid;
+                if(arr[mid-1] != target || mid == 0) return mid;
                 else right = mid -1;
             }
             else if (arr[mid] > target) right = mid - 1;
@@ -109,9 +109,8 @@ public class BiraySearch {
 
 
 
-
     public static void main(String[] args) {
-        
+
         int [] arr = new int[]{2,3,4,5,5,6,7,7,7,9,10};
         System.out.println(basic1_fun(arr,3));
         System.out.println(basic2_fun(arr,3));

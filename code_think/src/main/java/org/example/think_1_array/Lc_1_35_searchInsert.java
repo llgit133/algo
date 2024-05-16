@@ -1,4 +1,4 @@
-package main.java.org.example.think_1_array;
+package org.example.think_1_array;
 
 //35.搜索插入位置
 //目标值在数组所有元素之前
