@@ -15,7 +15,7 @@ public class Offer_4_52_getIntersectionNode {
         }
 
         while (headB != null){
-            if(set.contains(headB)){return headB;}
+            if(set.contains(headB)){return headB;} // 找到公共节点 set 比较的是 listNode 的hash code
             headB = headB.next;
         }
         return null;
