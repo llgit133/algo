@@ -16,7 +16,8 @@
 		<module>leetcode_learn</module>
 		<module>collection_framework</module>
 		<module>code_zheng_learn</module>
-	</modules>
+        <module>leetbook-1</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

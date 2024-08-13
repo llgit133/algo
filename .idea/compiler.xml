@@ -12,6 +12,7 @@
         <module name="offer_75" />
         <module name="code_zheng_learn" />
         <module name="collection_framework" />
+        <module name="leetbook-1" />
         <module name="code_zuo" />
         <module name="code_zuo_learn" />
         <module name="offer_119" />
@@ -31,6 +32,7 @@
       <module name="code_zuo" options="-parameters" />
       <module name="code_zuo_learn" options="-parameters" />
       <module name="collection_framework" options="-parameters" />
+      <module name="leetbook-1" options="-parameters" />
       <module name="leetcode_learn" options="-parameters" />
       <module name="offer_119" options="-parameters" />
       <module name="offer_75" options="-parameters" />
