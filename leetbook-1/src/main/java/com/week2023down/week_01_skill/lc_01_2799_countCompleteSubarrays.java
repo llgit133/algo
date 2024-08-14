@@ -21,7 +21,7 @@ public class lc_01_2799_countCompleteSubarrays {
     // 1. 暴力法
     // 双层for循环（获取所有的数组） + set hash(保证元素总数)
 
-    public static int Soultion(int[] nums) {
+    public static int Solution(int[] nums) {
 
         // 数组转set
         HashSet<Object> set = new HashSet<>();
@@ -96,7 +96,7 @@ public class lc_01_2799_countCompleteSubarrays {
     public static void main(String[] args) {
 
         int[] nums = new int[]{1,3,1,2,2};
-        System.out.println(Soultion(nums));
+        System.out.println(Solution(nums));
 
     }
 }
