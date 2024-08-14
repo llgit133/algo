@@ -51,7 +51,6 @@ public class lc_03_searchMatrix {
             else if(matrix[row3][col3] < target)  col3++;
             else if (matrix[row3][col3] > target) row3--;
         }
-
         return false;
     }
 
