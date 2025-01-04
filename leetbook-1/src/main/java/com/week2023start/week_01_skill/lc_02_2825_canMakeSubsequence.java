@@ -1,4 +1,4 @@
-package com.week2023down.week_01_skill;
+package com.week2023start.week_01_skill;
 
 
 //2825. 循环增长使字符串子序列等于另一个字符串

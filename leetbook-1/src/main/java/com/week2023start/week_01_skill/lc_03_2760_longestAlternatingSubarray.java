@@ -1,4 +1,4 @@
-package com.week2023down.week_01_skill;
+package com.week2023start.week_01_skill;
 
 
 //2760. 最长奇偶子数组

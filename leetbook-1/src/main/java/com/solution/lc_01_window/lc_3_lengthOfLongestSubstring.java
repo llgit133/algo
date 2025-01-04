@@ -1,4 +1,4 @@
-package com.Solution.lc_01_window;
+package com.solution.lc_01_window;
 
 import java.util.HashSet;
 import java.util.Set;
